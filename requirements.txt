@@ -6,7 +6,7 @@
 # Web App
 streamlit>=1.36.0
 python-dotenv>=1.0.0
-
+starlette<0.41.0
 # Tokenizer (預編譯 wheel，避免 Rust)
 tiktoken>=0.8.0
 
