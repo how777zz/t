@@ -1,0 +1,36 @@
+# ===============================================
+# TradingAgents 台股版 - Python 套件依賴
+# ===============================================
+
+# Web App
+streamlit>=1.36.0
+python-dotenv>=1.0.0
+
+# LangChain / LangGraph 核心
+langchain-core>=0.3.81
+langchain-google-genai>=2.0.0
+langchain-openai>=0.3.23
+langchain-anthropic>=0.3.15
+langchain-experimental>=0.3.4
+langgraph>=0.4.8
+langgraph-checkpoint-sqlite>=2.0.0
+
+# 資料來源
+yfinance>=0.2.63
+pandas>=2.0.0
+stockstats>=0.6.5
+parsel>=1.10.0
+
+# 工具
+requests>=2.32.0
+python-dateutil>=2.9.0
+pytz>=2025.1
+tqdm>=4.67.1
+typing-extensions>=4.14.0
+rich>=14.0.0
+typer>=0.21.0
+questionary>=2.1.0
+
+# 選用 (CLI / 資料庫)
+redis>=6.2.0
+backtrader>=1.9.78
