@@ -6,7 +6,16 @@
 # Web App
 streamlit>=1.36.0
 python-dotenv>=1.0.0
-starlette<0.41.0
+# 核心交易代理套件
+tradingagents==0.2.4
+
+# 強制降版 starlette 以解決 Streamlit 衝突
+starlette==0.39.2
+fastapi==0.115.0
+
+# 其他可能需要的套件 (如果有遺漏可以再加回來)
+langchain
+langgraph
 # Tokenizer (預編譯 wheel，避免 Rust)
 tiktoken>=0.8.0
 
