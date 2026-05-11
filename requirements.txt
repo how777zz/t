@@ -1,18 +1,13 @@
 # ===============================================
 # TradingAgents 台股版 - Streamlit Cloud 部署用
-# 只保留 Google Gemini 必要套件，避免 Rust 編譯
 # ===============================================
 
-# Web App
-streamlit>=1.36.0
+# Web App (不限制版本，讓它抓能兼容的最新版)
+streamlit
 python-dotenv>=1.0.0
 
-# 核心交易代理套件 (不指定版本，讓它抓最新版)
+# 核心交易代理套件
 tradingagents
-
-# 強制降版 starlette 以解決 Streamlit 衝突
-starlette==0.38.2
-fastapi==0.115.0
 
 # 其他可能需要的套件
 langchain
@@ -43,9 +38,3 @@ typing-extensions>=4.14.0
 rich>=14.0.0
 typer>=0.21.0
 questionary>=2.1.0
-
-# === 以下為選用，本機開發若要切其他 LLM 才要裝 ===
-# langchain-openai>=0.3.23
-# langchain-anthropic>=0.3.15
-# redis>=6.2.0
-# backtrader>=1.9.78
