@@ -1,10 +1,14 @@
 # ===============================================
 # TradingAgents 台股版 - Python 套件依賴
+# 已驗證可在 Streamlit Cloud (Python 3.11) 部署
 # ===============================================
 
 # Web App
 streamlit>=1.36.0
 python-dotenv>=1.0.0
+
+# 預先指定有 wheel 的 tiktoken 版本，避免 Rust 編譯
+tiktoken>=0.8.0
 
 # LangChain / LangGraph 核心
 langchain-core>=0.3.81
@@ -31,6 +35,6 @@ rich>=14.0.0
 typer>=0.21.0
 questionary>=2.1.0
 
-# 選用 (CLI / 資料庫)
-redis>=6.2.0
-backtrader>=1.9.78
+# 選用 (CLI / 資料庫) - 部署到雲端可不裝
+# redis>=6.2.0
+# backtrader>=1.9.78

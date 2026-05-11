@@ -1,0 +1,2 @@
+# Streamlit Cloud 系統套件 (apt-get install)
+# 預留檔案，目前不需要額外的系統套件
