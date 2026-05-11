@@ -5,32 +5,38 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tradingagents"
 version = "0.2.4"
-description = "TradingAgents: Multi-Agents LLM Financial Trading Framework"
+description = "TradingAgents Taiwan Edition: Multi-Agents LLM Stock Trading Framework powered by Google Gemini"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.13"
 dependencies = [
+    "streamlit>=1.36.0",
+    "python-dotenv>=1.0.0",
+    "tiktoken>=0.8.0",
     "langchain-core>=0.3.81",
-    "backtrader>=1.9.78.123",
-    "langchain-anthropic>=0.3.15",
+    "langchain-google-genai>=2.0.0",
     "langchain-experimental>=0.3.4",
-    "langchain-google-genai>=4.0.0",
-    "langchain-openai>=0.3.23",
     "langgraph>=0.4.8",
     "langgraph-checkpoint-sqlite>=2.0.0",
-    "pandas>=2.3.0",
-    "parsel>=1.10.0",
-    "pytz>=2025.2",
-    "questionary>=2.1.0",
-    "redis>=6.2.0",
-    "requests>=2.32.4",
-    "rich>=14.0.0",
-    "typer>=0.21.0",
-    "setuptools>=80.9.0",
+    "yfinance>=0.2.63",
+    "pandas>=2.0.0",
     "stockstats>=0.6.5",
+    "parsel>=1.10.0",
+    "requests>=2.32.4",
+    "python-dateutil>=2.9.0",
+    "pytz>=2025.2",
     "tqdm>=4.67.1",
     "typing-extensions>=4.14.0",
-    "yfinance>=0.2.63",
+    "rich>=14.0.0",
+    "typer>=0.21.0",
+    "questionary>=2.1.0",
+    "setuptools>=80.9.0",
 ]
+
+[project.optional-dependencies]
+# 選用：若要切換到 OpenAI / Anthropic / 其他 LLM，再裝這個 extras
+openai = ["langchain-openai>=0.3.23"]
+anthropic = ["langchain-anthropic>=0.3.15"]
+backtest = ["backtrader>=1.9.78", "redis>=6.2.0"]
 
 [project.scripts]
 tradingagents = "cli.main:app"
