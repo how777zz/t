@@ -11,7 +11,7 @@ python-dotenv>=1.0.0
 tradingagents
 
 # 強制降版 starlette 以解決 Streamlit 衝突
-starlette==0.39.2
+starlette==0.38.2
 fastapi==0.115.0
 
 # 其他可能需要的套件
